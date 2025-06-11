@@ -1,8 +1,5 @@
 /*
-🎯 BONUS
-Se è null: stampa “Il dato è vuoto”
-Se è un array: stampa la sua lunghezza
-Se è una Promise: attendi che si risolva e stampa il valore del resolve.
+
 */
 
 let valore : unknown = null;
@@ -20,4 +17,15 @@ if(typeof valore === "string"){
  valore.then((msg) => console.log(msg))
 }else{
   console.log("Tipo non supportato")
+}
+
+
+type Dipendente = {
+  nome: string,
+  cognome: string,
+  annoNascita: number,
+  sesso: "m" | "f",
+  anniDiServizio: number[],
+  readonly emailAziendale: string,
+  contratto: "indeterminato" | "determinato" | "freelance";
 }
